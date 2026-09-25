@@ -22,7 +22,6 @@ img {
 /* ==========================
    2. DESIGN TOKENS
    ========================== */
-
 :root {
     /* Color */
     --color-bg: #ffffff;
@@ -31,7 +30,9 @@ img {
     --color-text: #1a1a1a;
     --color-muted: #6b7280;
     --color-accent: #845b9a;
-    --color-border: #845b9a;
+    --color-accent-strong: #6b4a7e;
+    --color-border: #714788;
+    --color-danger: #b42318;
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     /* Spacing — a modular scale */
@@ -130,40 +131,6 @@ textarea {
     width: 100%;
     font: inherit;
     margin-bottom: var(--space-md);
-}
-
-
-   /* ==========================
-   8. BUTTONS
-   ========================== */
-
-   /* ==========================
-   9. SEARCH 
-   ========================== */
-
-   /* ==========================
-   10. CARDS
-   ========================== */
-.favorites-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-}
-
-.empty-message {
-    grid-column: 1 / -1;
-}
-
-
-   /* ==========================
-   11. FOOTER
-   ========================== */
-
-   /* ==========================
-   12. RESPONSIVE
-   ========================== */
-   @media (min-width: 768px) {
-    .favorites-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-}
+    padding: var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius:

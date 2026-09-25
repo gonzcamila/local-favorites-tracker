@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>project 2</title>
-      <link rel="stylesheet" href="css/styles.css"
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -14,40 +14,73 @@
     </header>
 
     <main>
-            <section class="add-section">
-    <h2>Add New Favorite</h2>
-    <form id="add-favorite-form">
-        <div class="form-group">
-            <label for="name">Place Name *</label>
-            <input type="text" id="name" name="name" required aria-required="true">
-     </div>
-        <!-- category select, rating select, notes textarea -->
-        <button type="submit" class="btn btn-primary">Add Favorite</button>
-      </form>
-</section>
+        <section class="add-section">
+            <h2>Add New Favorite</h2>
+            <form id="add-favorite-form">
+                <div class="form-group">
+                    <label for="name">Place Name *</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
 
-<section class="controls-section">
-    <label for="search-input">Search favorites</label>
-    <input type="search" id="search-input" placeholder="Search names and notes">
+                <div class="form-group">
+                    <label for="category">Category *</label>
+                    <select id="category" name="category" required aria-required="true">
+                        <option value="">Choose a category</option>
+                        <option value="coffee">Coffee</option>
+                        <option value="restaurant">Restaurant</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="outdoors">Outdoors</option>
+                        <option value="vacation spot">Vacation Spot</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
-    <label for="category-filter">Filter by category</label>
-    <select id="category-filter">
-        <option value="all">All categories</option>
-        <!-- one option per category you used in the add form -->
-    </select>
-</section>
+                <div class="form-group">
+                    <label for="rating">Rating *</label>
+                    <select id="rating" name="rating" required aria-required="true">
+                        <option value="5">5 stars</option>
+                        <option value="4">4 stars</option>
+                        <option value="3">3 stars</option>
+                        <option value="2">2 stars</option>
+                        <option value="1">1 star</option>
+                    </select>
+                </div>
 
-<section class="favorites-section">
-    <div id="favorites-list" class="favorites-grid">
-        <p class="empty-message">No favorites yet. Add your first favorite place above!</p>
-    </div>
-</section>
+                <div class="form-group">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add Favorite</button>
+            </form>
+        </section>
+
+        <section class="controls-section">
+            <label for="search-input">Search favorites</label>
+            <input type="search" id="search-input" placeholder="Search names and notes">
+
+            <label for="category-filter">Filter by category</label>
+            <select id="category-filter">
+                <option value="all">All categories</option>
+                <option value="coffee">Coffee</option>
+                <option value="restaurant">Restaurant</option>
+                <option value="shopping">Shopping</option>
+                <option value="outdoors">Outdoors</option>
+                <option value="vacation spot">Vacation Spot</option>
+                <option value="other">Other</option>
+            </select>
+        </section>
+
+        <section class="favorites-section">
+            <div id="favorites-list" class="favorites-grid">
+            </div>
+        </section>
     </main>
 
-    <Footer>
-         <p>&copy; 2026 Camila Gonzalez</p>
-    </Footer>
-    
-     <script src="js/app.js"></script>
+    <footer>
+        <p>&copy; 2026 Camila Gonzalez</p>
+    </footer>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
