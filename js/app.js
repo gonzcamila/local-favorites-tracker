@@ -15,7 +15,7 @@ let myFavorite = {
     dateAdded: new Date().toLocaleDateString()
 };
 
-// aqui te ensena el objeto y la propiedades
+
 console.log(myFavorite);
 console.log(myFavorite.name);
 console.log(myFavorite.category);
@@ -23,11 +23,11 @@ console.log(myFavorite.rating);
 console.log(myFavorite.notes);
 console.log(myFavorite.dateAdded);
 
-// this is showing string from the object's properties
+
 let displayText = myFavorite.name + ' - Rating: ' + myFavorite.rating + '/5';
 console.log(displayText);
 
-// Makes sure each field has the correct data type
+// this part akes sure each field has the correct data type
 console.log(typeof myFavorite.name);       // string
 console.log(typeof myFavorite.category);   // string
 console.log(typeof myFavorite.rating);     // number
@@ -55,24 +55,24 @@ function addFavorite(event) {
     };
 
     favorites.push(newFavorite);
-    saveFavorites();      // new — save right after adding
+    saveFavorites();      // new — saves right after adding
     form.reset();
     displayFavorites();
 }
 
 form.addEventListener('submit', addFavorite);
 
-// removes a favorite (with confirmation), then saves and re-renders
+// removes a favorite 
 function deleteFavorite(index) {
     const favorite = favorites[index];
     if (confirm(`Delete "${favorite.name}"?`)) {
         favorites.splice(index, 1);   // remove 1 item at index
-        saveFavorites();              // new — save after deleting
-        searchFavorites();            // re-render, keeping current filter
+        saveFavorites();              // new save after deleting
+        searchFavorites();            
     }
 }
 
-// filters favorites by search text + category, then builds the cards
+// filters by search text  and ategory
 function searchFavorites() {
     const searchText = searchInput.value.toLowerCase().trim();
     const selectedCategory = categoryFilter.value;
@@ -120,11 +120,11 @@ function displayFavorites() {
     searchFavorites();
 }
 
-// live search as you type, and re-filter when category changes
+// search and filter listeners
 searchInput.addEventListener('input', searchFavorites);
 categoryFilter.addEventListener('change', searchFavorites);
 
-// saves the favorites array to localStorage
+// saves the favorites 
 function saveFavorites() {
     try {
         localStorage.setItem('localFavorites', JSON.stringify(favorites));
@@ -147,6 +147,7 @@ function loadFavorites() {
     }
 }
 
-// esta es la ultima linea en app.js
-loadFavorites();      // fill favorites from storage first
-displayFavorites();   // then render (and reset controls)
+
+// The last lines in js/app.js
+loadFavorites();      // new: fill favorites from storage first
+displayFavorites();   // already here since Lab 13.5

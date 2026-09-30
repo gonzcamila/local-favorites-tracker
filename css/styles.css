@@ -22,6 +22,7 @@ img {
 /* ==========================
    2. DESIGN TOKENS
    ========================== */
+
 :root {
     /* Color */
     --color-bg: #ffffff;
@@ -31,8 +32,7 @@ img {
     --color-muted: #6b7280;
     --color-accent: #845b9a;
     --color-accent-strong: #6b4a7e;
-    --color-border: #714788;
-    --color-danger: #b42318;
+    --color-border: #845b9a;
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     /* Spacing — a modular scale */
@@ -133,4 +133,57 @@ textarea {
     margin-bottom: var(--space-md);
     padding: var(--space-sm);
     border: 1px solid var(--color-border);
-    border-radius:
+    border-radius: var(--radius-md);
+}
+
+
+   /* ==========================
+   8. BUTTONS
+   ========================== */
+button {
+    font: inherit;
+    padding: var(--space-sm) var(--space-lg);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent-strong);
+}
+
+   /* ==========================
+   9. SEARCH 
+   ========================== */
+
+   /* ==========================
+   10. CARDS
+   ========================== */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+.empty-message {
+    grid-column: 1 / -1;
+}
+
+
+   /* ==========================
+   11. FOOTER
+   ========================== */
+
+   /* ==========================
+   12. RESPONSIVE
+   ========================== */
+   @media (min-width: 768px) {
+    .favorites-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
