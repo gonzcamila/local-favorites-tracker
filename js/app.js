@@ -148,6 +148,6 @@ function loadFavorites() {
 }
 
 
-// The last lines in js/app.js
-loadFavorites();      // new: fill favorites from storage first
-displayFavorites();   // already here since Lab 13.5
+
+loadFavorites();     
+displayFavorites();  
