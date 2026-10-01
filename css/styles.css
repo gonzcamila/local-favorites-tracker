@@ -25,14 +25,15 @@ img {
 
 :root {
     /* Color */
-    --color-bg: #ffffff;
+    --color-accent: #4d1979;
+    --color-accent-strong: #321052;
+    --color-text: #172033;
+    --color-muted: #657186;
+    --color-border: #d9dfeb;
+    --color-bg: #f7f8fb;
     --color-surface: #ffffff;
-    --color-surface-alt: #ffffff;
-    --color-text: #1a1a1a;
-    --color-muted: #6b7280;
-    --color-accent: #845b9a;
-    --color-accent-strong: #6b4a7e;
-    --color-border: #845b9a;
+    --color-surface-alt: #f1f5f9;
+    --color-danger: #b42318;
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     /* Spacing — a modular scale */
@@ -53,7 +54,6 @@ img {
 
     /* Layout */
     --page-width: 64rem;
-    --reading-width: 70ch;
     --radius-md: 8px;
 }
 
@@ -96,6 +96,8 @@ a:focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
 }
+
+
 /* ==========================
    4. LAYOUT
    Breakpoints used in this file:
@@ -105,21 +107,22 @@ a:focus-visible {
    ========================== */
 
 
-section, aside { margin-bottom: var(--space-xl); }
-
-
 /* ==========================
    5. HEADER
    ========================== */
 
 
-   /* ==========================
+/* ==========================
    6. SECTIONS
    ========================== */
 
-   /* ==========================
+section { margin-bottom: var(--space-xl); }
+
+
+/* ==========================
    7. FORMS
    ========================== */
+
 label {
     display: block;
     margin-bottom: var(--space-sm);
@@ -137,9 +140,10 @@ textarea {
 }
 
 
-   /* ==========================
+/* ==========================
    8. BUTTONS
    ========================== */
+
 button {
     font: inherit;
     padding: var(--space-sm) var(--space-lg);
@@ -157,16 +161,21 @@ button {
     background-color: var(--color-accent-strong);
 }
 
-   /* ==========================
-   9. SEARCH 
+.btn-danger {
+    background-color: var(--color-danger);
+    color: var(--color-surface);
+}
+
+
+/* ==========================
+   9. SEARCH
    ========================== */
 
-   /* ==========================
+
+/* ==========================
    10. CARDS
    ========================== */
-   /* ==========================
-   10. CARDS
-   ========================== */
+
 .favorites-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -190,14 +199,18 @@ button {
     transform: translateY(-2px);
     border-color: var(--color-accent-strong);
 }
-   /* ==========================
+
+
+/* ==========================
    11. FOOTER
    ========================== */
 
-   /* ==========================
+
+/* ==========================
    12. RESPONSIVE
    ========================== */
-   @media (min-width: 768px) {
+
+@media (min-width: 768px) {
     .favorites-grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
